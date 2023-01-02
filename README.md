@@ -1,0 +1,2 @@
+# EATspots
+EATspots is the restaurant management app in which different restaurants with many cuisines can be added and managed.Users can view the restaurant which suits their taste.They can also bookmark restaurant to visit later and mark a restaurant visited. They can also add review and rate a restaurant.It also shows the spotlighted restaurants
