@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from manageEAT.views.dashboard import dashboard
+
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path("", dashboard, name="dashboard"),
+    path("account/", include("django.contrib.auth.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
+    path("admin/", admin.site.urls),
 ]
