@@ -215,3 +215,7 @@ tags
 .idea/
 
 .pytest_cache/
+*.sqlite3
+.jpg
+.jpeg
+.png

@@ -7,6 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-au!ix$%fxzi4tq(^89fhu%pfyh%ks1-#*e+an)751^jw4y0ho#"
 
 INSTALLED_APPS = [
+    "manageEAT.apps.ManageeatConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
