@@ -216,6 +216,4 @@ tags
 
 .pytest_cache/
 *.sqlite3
-.jpg
-.jpeg
-.png
+media/
