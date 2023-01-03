@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+{% block content %}
+<header class="bg-white shadow">
+    <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ restaurant.name }}</h1>
+      <p class="mt-1 max-w-2xl text-sm text-gray-500"> {{ restaurant.address }}</p>
+      <p class="mt-1 max-w-2xl text-sm text-gray-500"> {{ restaurant.location }}</p>
+    </div>
+</header>
+<main>
+<div class="rounded-lg bg-white px-5 py-6 shadow sm:px-6" >
+        <div >
+          <a href="{{ restaurant.image }}">
+          {% thumbnail restaurant.image 200x200 crop="smart" as image_thumbnail %}
+          <img src="{{ image_thumbnail.url }}" >
+          </a>
+        </div>
+  </div>
+</main>
+{% endblock %}
