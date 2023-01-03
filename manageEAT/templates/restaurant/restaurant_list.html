@@ -21,7 +21,7 @@
           <div class="mt-4 flex justify-between">
                 <div>
                 <h3 class="text-sm text-gray-700">
-                    <a href="#"><h2 class="text-3xl font-bold tracking-tight text-gray-700">{{ restaurant.name }}</h2>
+                    <a href="{% url 'restaurant_detail' restaurant.slug %}"><h2 class="text-3xl font-bold tracking-tight text-gray-700">{{ restaurant.name }}</h2>
                     </a>
                 </h3>
                 <p class="mt-1 text-sm text-gray-500">{{ restaurant.location }}</p>

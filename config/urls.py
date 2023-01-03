@@ -18,13 +18,18 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from manageEAT.views import restaurant_list
+from manageEAT.views import restaurant_detail, restaurant_list
 
 urlpatterns = [
     path("", restaurant_list.RestaurantList.as_view(), name="restaurant_list"),
     path("account/", include("django.contrib.auth.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
     path("admin/", admin.site.urls),
+    path(
+        "<slug>/",
+        restaurant_detail.RestaurantDetail.as_view(),
+        name="restaurant_detail",
+    ),
 ]
 
 if settings.DEBUG:
