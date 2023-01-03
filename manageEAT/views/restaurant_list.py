@@ -4,6 +4,6 @@ from django.views.generic.list import ListView
 from manageEAT.models.restaurant import Restaurant
 
 
-class QuestionListView(LoginRequiredMixin, ListView):
+class RestaurantList(LoginRequiredMixin, ListView):
     model = Restaurant
-    template_name = "restaurant/dashboard.html"
+    template_name = "restaurant/restaurant_list.html"

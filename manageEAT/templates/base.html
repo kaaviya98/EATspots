@@ -9,10 +9,10 @@
 </head>
 <body class="h-full">
 <div class="min-h-full">
-    <div class="bg-gray-800 pb-32">
+    <div class="bg-gray-100 pb-32">
       <nav class="bg-gray-800">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div class="border-b border-gray-700">
+          <div class="border-b border-gray-100">
             <div class="flex h-16 items-center justify-between px-4 sm:px-0">
               <div class="flex items-center">
                 <div class="flex-shrink-0">
@@ -21,7 +21,7 @@
                 <div class="hidden md:block">
                   <div class="ml-10 flex items-baseline space-x-4">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="{% url 'dashboard' %}" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+                    <a href="{% url 'restaurant_list' %}" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
 
                     <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Spotlights</a>
 
@@ -99,10 +99,22 @@
             </div>
           </div>
         </div>
-      </nav>
-      <div>
-        {% block dashboard %}
-        {% endblock %}
-    </div>
+   </nav>
+     <div>
+      <main class="-mt-32">
+        <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+            <!-- Replace with your content -->
+            <div class="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
+                <div class="h-96 rounded-lg border-4 border-dashed border-gray-200">
+                    <div id="content">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+            <!-- /End replace -->
+        </div>
+    </main>
+     </div>
 </body>
 </html>
