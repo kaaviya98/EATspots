@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from config.env import env
@@ -17,6 +18,7 @@ INSTALLED_APPS = [
     "tailwind",
     "theme",
     "django_browser_reload",
+    "easy_thumbnails",
 ]
 
 TAILWIND_APP_NAME = "theme"
@@ -86,5 +88,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 LOGIN_URL = "login"
-LOGIN_REDIRECT_URL = "dashboard"
+LOGIN_REDIRECT_URL = "restaurant_list"
 LOGOUT_REDIRECT_URL = "login"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
